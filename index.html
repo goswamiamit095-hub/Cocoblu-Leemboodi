@@ -242,3 +242,386 @@
                 </div>
 
             </div>
+                        <!-- Purchase Order -->
+
+            <div class="menu-group">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <span>Purchase Order</span>
+
+                    <i class="fa-solid fa-angle-down arrow"></i>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a data-page="po-recommendation">
+
+                        PO Recommendation
+
+                    </a>
+
+                    <a data-page="recall-recommendation">
+
+                        Recall Recommendation
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Projection -->
+
+            <div class="menu-group">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-file-invoice"></i>
+
+                    <span>Projection</span>
+
+                    <i class="fa-solid fa-angle-down arrow"></i>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a data-page="projection">
+
+                        Manual Projection
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Stock -->
+
+            <div class="menu-group">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-boxes-stacked"></i>
+
+                    <span>Stock</span>
+
+                    <i class="fa-solid fa-angle-down arrow"></i>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a data-page="daily-stock">
+
+                        Daily Stock
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Payment -->
+
+            <div class="menu-group">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <span>Payment</span>
+
+                    <i class="fa-solid fa-angle-down arrow"></i>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a data-page="invoice">
+
+                        Invoice
+
+                    </a>
+
+                    <a data-page="payment">
+
+                        Payment
+
+                    </a>
+
+                    <a data-page="deduction">
+
+                        Deduction
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Returns -->
+
+            <div class="menu-group">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    <span>Returns</span>
+
+                    <i class="fa-solid fa-angle-down arrow"></i>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a data-page="monthly-return">
+
+                        Monthly Return
+
+                    </a>
+
+                    <a data-page="daily-return">
+
+                        Daily Return
+
+                    </a>
+
+                    <a data-page="asin-return">
+
+                        ASIN Return
+
+                    </a>
+
+                    <a data-page="brand-return">
+
+                        Brand Return
+
+                    </a>
+
+                    <a data-page="category-return">
+
+                        Category Return
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Settings -->
+
+            <div class="menu-group">
+
+                <button class="menu-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                    <i class="fa-solid fa-angle-down arrow"></i>
+
+                </button>
+
+                <div class="submenu">
+
+                    <a data-page="settings">
+
+                        Application Settings
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </aside>
+
+    <!-- ===========================
+            MAIN CONTENT
+    ============================ -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div class="top-left">
+
+                <button id="toggleSidebar">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h1 id="pageTitle">
+
+                    Business Overview
+
+                </h1>
+
+            </div>
+
+            <div class="top-center">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search anything...">
+
+                </div>
+
+            </div>
+
+            <div class="top-right">
+
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <div class="profile">
+
+                    <img src="assets/images/user.png"
+                         alt="User">
+
+                    <div>
+
+                        <h4>Amit</h4>
+
+                        <span>Administrator</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Breadcrumb -->
+
+        <div class="breadcrumb">
+
+            <span>Dashboard</span>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+            <span id="breadcrumbPage">
+
+                Business Overview
+
+            </span>
+
+        </div>
+
+        <!-- Dynamic Content -->
+
+        <section id="pageContainer">
+
+        </section>
+
+    </main>
+
+</div>
+            <!-- Loader -->
+
+        <div id="pageLoader" class="page-loader">
+
+            <div class="loader"></div>
+
+            <p>Loading Dashboard...</p>
+
+        </div>
+
+        <!-- Scroll To Top -->
+
+        <button id="scrollTopBtn" class="scroll-top">
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </button>
+
+        <!-- Floating Action Button -->
+
+        <button id="fabButton" class="fab">
+
+            <i class="fa-solid fa-plus"></i>
+
+        </button>
+
+        <!-- Toast Notification -->
+
+        <div id="toast" class="toast">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span id="toastMessage">
+
+                Welcome to Cocoblu BI
+
+            </span>
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+
+            <div class="footer-left">
+
+                © 2026 Cocoblu Retail Pvt. Ltd.
+
+            </div>
+
+            <div class="footer-right">
+
+                Version 2.0 Enterprise
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- ===================================
+        JavaScript
+=================================== -->
+
+<script src="js/config.js"></script>
+
+<script src="js/utils.js"></script>
+
+<script src="js/api.js"></script>
+
+<script src="js/navigation.js"></script>
+
+<script src="js/router.js"></script>
+
+<script src="js/loader.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
