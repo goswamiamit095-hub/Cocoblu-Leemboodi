@@ -1,4 +1,1538 @@
+<!-- ==========================================================
+                        HOME DASHBOARD
+=========================================================== -->
 
-<div class="page-container">
+<div class="dashboard fade-in">
+
+    <!-- ======================================
+            PAGE HEADER
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="page-header">
+
+            <div class="page-header-left">
+
+                <h1>
+
+                    Good Morning,
+                    <span id="userName">Amit</span> 👋
+
+                </h1>
+
+                <p>
+
+                    Welcome to Cocoblu Business Intelligence Dashboard
+
+                </p>
+
+            </div>
+
+            <div class="page-header-right">
+
+                <div class="sync-card">
+
+                    <div class="sync-icon">
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                    </div>
+
+                    <div class="sync-content">
+
+                        <small>
+
+                            Last Sync
+
+                        </small>
+
+                        <strong id="lastSyncTime">
+
+                            --
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            BUSINESS HEALTH SCORE
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="business-health-card">
+
+            <div class="business-health-left">
+
+                <h2>
+
+                    Business Health Score
+
+                </h2>
+
+                <p>
+
+                    Overall performance based on Sales,
+                    Growth, Returns, Payments and Inventory
+
+                </p>
+
+                <div class="health-score">
+
+                    <span id="healthScore">
+
+                        --
+
+                    </span>
+
+                    <small>
+
+                        /100
+
+                    </small>
+
+                </div>
+
+                <div
+                    class="health-status badge-success"
+                    id="healthStatus">
+
+                    Loading...
+
+                </div>
+
+            </div>
+
+            <div class="business-health-right">
+
+                <div class="health-check-list">
+
+                    <div class="health-item">
+
+                        <i class="fa-solid fa-circle-check text-success"></i>
+
+                        <span>
+
+                            Sales
+
+                        </span>
+
+                    </div>
+
+                    <div class="health-item">
+
+                        <i class="fa-solid fa-circle-check text-success"></i>
+
+                        <span>
+
+                            Growth
+
+                        </span>
+
+                    </div>
+
+                    <div class="health-item">
+
+                        <i class="fa-solid fa-circle-check text-success"></i>
+
+                        <span>
+
+                            Payments
+
+                        </span>
+
+                    </div>
+
+                    <div class="health-item">
+
+                        <i class="fa-solid fa-circle-check text-success"></i>
+
+                        <span>
+
+                            Inventory
+
+                        </span>
+
+                    </div>
+
+                    <div class="health-item">
+
+                        <i class="fa-solid fa-circle-exclamation text-warning"></i>
+
+                        <span>
+
+                            Returns
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            KPI SECTION START
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="kpi-grid">
+            <!-- ======================================
+                    KPI CARD 1 : GMV
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>Total GMV</h5>
+
+                        <h2 class="kpi-value" id="gmvValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="gmvGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Vs Last Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    KPI CARD 2 : ORDERS
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>Total Orders</h5>
+
+                        <h2 class="kpi-value" id="ordersValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="ordersGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Vs Last Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    KPI CARD 3 : UNITS
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>Units Sold</h5>
+
+                        <h2 class="kpi-value" id="unitsValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="unitsGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Vs Last Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    KPI CARD 4 : ASP
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>Average Selling Price</h5>
+
+                        <h2 class="kpi-value" id="aspValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-tags"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="aspGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Vs Last Month
+
+                    </span>
+
+                </div>
+
+            </div>
+            <!-- ======================================
+                    KPI CARD 5 : DF SHARE
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>DF Share</h5>
+
+                        <h2 class="kpi-value" id="dfShareValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="dfShareGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Vs Last Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    KPI CARD 6 : FC SHARE
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>FC Share</h5>
+
+                        <h2 class="kpi-value" id="fcShareValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-warehouse"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth down">
+
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+
+                        <span id="fcShareGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Vs Last Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    KPI CARD 7 : ACTIVE ASIN
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>Active ASIN</h5>
+
+                        <h2 class="kpi-value" id="activeAsinValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-barcode"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="activeAsinGrowth">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Active This Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    KPI CARD 8 : SALES GROWTH
+            ======================================= -->
+
+            <div class="kpi-card hover-lift">
+
+                <div class="kpi-header">
+
+                    <div>
+
+                        <h5>Sales Growth</h5>
+
+                        <h2 class="kpi-value" id="salesGrowthValue">
+
+                            --
+
+                        </h2>
+
+                    </div>
+
+                    <div class="kpi-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="kpi-footer">
+
+                    <div class="kpi-growth up">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="salesGrowthStatus">
+
+                            --
+
+                        </span>
+
+                    </div>
+
+                    <span class="kpi-period">
+
+                        Month on Month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            BUSINESS INSIGHTS START
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="grid-4">
+            <!-- ======================================
+                    INSIGHT CARD 1 : TOP BRAND
+            ======================================= -->
+
+            <div class="dashboard-card insight-card">
+
+                <div class="insight-header">
+
+                    <div class="insight-icon success">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+                    <div class="insight-menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="insight-body">
+
+                    <small>
+
+                        Top Performing Brand
+
+                    </small>
+
+                    <h3 id="topBrandName">
+
+                        --
+
+                    </h3>
+
+                    <h2 id="topBrandSales">
+
+                        --
+
+                    </h2>
+
+                </div>
+
+                <div class="insight-footer">
+
+                    <span class="badge-success">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span id="topBrandGrowth">
+
+                            --
+
+                        </span>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    INSIGHT CARD 2 : LOWEST BRAND
+            ======================================= -->
+
+            <div class="dashboard-card insight-card">
+
+                <div class="insight-header">
+
+                    <div class="insight-icon danger">
+
+                        <i class="fa-solid fa-chart-line-down"></i>
+
+                    </div>
+
+                    <div class="insight-menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="insight-body">
+
+                    <small>
+
+                        Lowest Performing Brand
+
+                    </small>
+
+                    <h3 id="lowBrandName">
+
+                        --
+
+                    </h3>
+
+                    <h2 id="lowBrandSales">
+
+                        --
+
+                    </h2>
+
+                </div>
+
+                <div class="insight-footer">
+
+                    <span class="badge-danger">
+
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+
+                        <span id="lowBrandGrowth">
+
+                            --
+
+                        </span>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    INSIGHT CARD 3 : BEST ASIN
+            ======================================= -->
+
+            <div class="dashboard-card insight-card">
+
+                <div class="insight-header">
+
+                    <div class="insight-icon primary">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div class="insight-menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="insight-body">
+
+                    <small>
+
+                        Best Selling ASIN
+
+                    </small>
+
+                    <h3 id="bestAsin">
+
+                        --
+
+                    </h3>
+
+                    <h2 id="bestAsinSales">
+
+                        --
+
+                    </h2>
+
+                </div>
+
+                <div class="insight-footer">
+
+                    <span class="badge-primary">
+
+                        Highest Sales
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    INSIGHT CARD 4 : ALERTS
+            ======================================= -->
+
+            <div class="dashboard-card insight-card">
+
+                <div class="insight-header">
+
+                    <div class="insight-icon warning">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    </div>
+
+                    <div class="insight-menu">
+
+                        <i class="fa-solid fa-ellipsis"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="insight-body">
+
+                    <small>
+
+                        Business Alerts
+
+                    </small>
+
+                    <h2 id="alertCount">
+
+                        --
+
+                    </h2>
+
+                    <p id="alertSummary">
+
+                        No alerts available
+
+                    </p>
+
+                </div>
+
+                <div class="insight-footer">
+
+                    <span class="badge-warning">
+
+                        Needs Attention
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            CHART SECTION START
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="grid-2">
+            <!-- ======================================
+                    SALES TREND CHART
+            ======================================= -->
+
+            <div class="dashboard-card chart-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3 class="card-title">
+
+                            Sales Trend
+
+                        </h3>
+
+                        <p>
+
+                            Monthly GMV & Orders Overview
+
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+
+                        <button class="secondary-btn">
+
+                            Monthly
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+
+                    <canvas id="salesTrendChart"></canvas>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    BRAND CONTRIBUTION
+            ======================================= -->
+
+            <div class="dashboard-card chart-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3 class="card-title">
+
+                            Brand Contribution
+
+                        </h3>
+
+                        <p>
+
+                            Contribution by Brand
+
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+
+                        <button class="secondary-btn">
+
+                            View All
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+
+                    <canvas id="brandContributionChart"></canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            DF VS FC SHARE
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="dashboard-card chart-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3 class="card-title">
+
+                        DF Share vs FC Share
+
+                    </h3>
+
+                    <p>
+
+                        Distribution Performance Comparison
+
+                    </p>
+
+                </div>
+
+                <div class="card-action">
+
+                    <button class="secondary-btn">
+
+                        Last 12 Months
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="dfFcChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            QUICK ACTION START
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="quick-action-grid">
+            <!-- ======================================
+                    QUICK ACTION 1
+            ======================================= -->
+
+            <div class="quick-action-card">
+
+                <div class="quick-action-icon primary">
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                </div>
+
+                <div class="quick-action-content">
+
+                    <h4>
+
+                        Refresh Data
+
+                    </h4>
+
+                    <p>
+
+                        Sync latest business data
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="action-btn"
+                    id="refreshDashboard">
+
+                    Refresh
+
+                </button>
+
+            </div>
+
+            <!-- ======================================
+                    QUICK ACTION 2
+            ======================================= -->
+
+            <div class="quick-action-card">
+
+                <div class="quick-action-icon success">
+
+                    <i class="fa-solid fa-file-excel"></i>
+
+                </div>
+
+                <div class="quick-action-content">
+
+                    <h4>
+
+                        Export Report
+
+                    </h4>
+
+                    <p>
+
+                        Download Dashboard Report
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="action-btn"
+                    id="exportDashboard">
+
+                    Export
+
+                </button>
+
+            </div>
+
+            <!-- ======================================
+                    QUICK ACTION 3
+            ======================================= -->
+
+            <div class="quick-action-card">
+
+                <div class="quick-action-icon warning">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <div class="quick-action-content">
+
+                    <h4>
+
+                        Growth Dashboard
+
+                    </h4>
+
+                    <p>
+
+                        Open Growth Analytics
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="action-btn"
+                    id="openGrowth">
+
+                    Open
+
+                </button>
+
+            </div>
+
+            <!-- ======================================
+                    QUICK ACTION 4
+            ======================================= -->
+
+            <div class="quick-action-card">
+
+                <div class="quick-action-icon danger">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div class="quick-action-content">
+
+                    <h4>
+
+                        Ads Dashboard
+
+                    </h4>
+
+                    <p>
+
+                        Open Ads Performance
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="action-btn"
+                    id="openAds">
+
+                    Open
+
+                </button>
+
+            </div>
+
+            <!-- ======================================
+                    QUICK ACTION 5
+            ======================================= -->
+
+            <div class="quick-action-card">
+
+                <div class="quick-action-icon info">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <div class="quick-action-content">
+
+                    <h4>
+
+                        Payments
+
+                    </h4>
+
+                    <p>
+
+                        Review Payment Status
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="action-btn"
+                    id="openPayments">
+
+                    Open
+
+                </button>
+
+            </div>
+
+            <!-- ======================================
+                    QUICK ACTION 6
+            ======================================= -->
+
+            <div class="quick-action-card">
+
+                <div class="quick-action-icon purple">
+
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                </div>
+
+                <div class="quick-action-content">
+
+                    <h4>
+
+                        Returns
+
+                    </h4>
+
+                    <p>
+
+                        Check Return Analytics
+
+                    </p>
+
+                </div>
+
+                <button
+                    class="action-btn"
+                    id="openReturns">
+
+                    Open
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            SMART ALERT SECTION START
+    ======================================= -->
+
+    <section class="dashboard-section">
+
+        <div class="grid-2">
+            <!-- ======================================
+                    SMART ALERTS
+            ======================================= -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3 class="card-title">
+
+                            Smart Business Alerts
+
+                        </h3>
+
+                        <p>
+
+                            Important alerts requiring your attention
+
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+
+                        <span class="badge-danger" id="totalAlerts">
+
+                            0 Alerts
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="alert-list">
+
+                        <!-- Alert 1 -->
+
+                        <div class="alert-item">
+
+                            <div class="alert-icon danger">
+
+                                <i class="fa-solid fa-circle-exclamation"></i>
+
+                            </div>
+
+                            <div class="alert-content">
+
+                                <h4>
+
+                                    Stock Alert
+
+                                </h4>
+
+                                <p id="stockAlert">
+
+                                    No stock alerts.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Alert 2 -->
+
+                        <div class="alert-item">
+
+                            <div class="alert-icon warning">
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                            </div>
+
+                            <div class="alert-content">
+
+                                <h4>
+
+                                    Payment Alert
+
+                                </h4>
+
+                                <p id="paymentAlert">
+
+                                    No payment alerts.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Alert 3 -->
+
+                        <div class="alert-item">
+
+                            <div class="alert-icon primary">
+
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                            </div>
+
+                            <div class="alert-content">
+
+                                <h4>
+
+                                    Return Alert
+
+                                </h4>
+
+                                <p id="returnAlert">
+
+                                    No return alerts.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Alert 4 -->
+
+                        <div class="alert-item">
+
+                            <div class="alert-icon success">
+
+                                <i class="fa-solid fa-chart-column"></i>
+
+                            </div>
+
+                            <div class="alert-content">
+
+                                <h4>
+
+                                    Sales Alert
+
+                                </h4>
+
+                                <p id="salesAlert">
+
+                                    Sales performing normally.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ======================================
+                    AI BUSINESS SUMMARY
+            ======================================= -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3 class="card-title">
+
+                            AI Business Summary
+
+                        </h3>
+
+                        <p>
+
+                            Automatically generated business insights
+
+                        </p>
+
+                    </div>
+
+                    <div class="card-action">
+
+                        <span class="badge-primary">
+
+                            AI Powered
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="ai-summary">
+
+                        <div class="ai-avatar">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+                        <div class="ai-content">
+
+                            <ul id="aiSummary">
+
+                                <li>
+
+                                    Dashboard is waiting for live business data...
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================
+            HOME DASHBOARD END SECTION
+    ======================================= -->
+
+    <section class="dashboard-section">
+    <!-- ======================================
+            DASHBOARD FOOTER
+    ======================================= -->
+
+    <footer class="dashboard-footer">
+
+        <div class="footer-left">
+
+            <p>
+
+                © <span id="currentYear">2026</span>
+
+                Cocoblu Business Intelligence
+
+            </p>
+
+        </div>
+
+        <div class="footer-center">
+
+            <span>
+
+                Version
+
+            </span>
+
+            <strong>
+
+                v1.0.0
+
+            </strong>
+
+        </div>
+
+        <div class="footer-right">
+
+            <span>
+
+                Designed & Developed for Cocoblu
+
+            </span>
+
+        </div>
+
+    </footer>
+
+</section>
+
+<!-- ======================================
+        END OF HOME DASHBOARD
+====================================== -->
 
 </div>
