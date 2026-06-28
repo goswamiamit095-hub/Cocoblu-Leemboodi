@@ -1,1 +1,695 @@
 
+/*==========================================
+        SIDEBAR
+==========================================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:280px;
+
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #172554 0%,
+        #1e3a8a 100%
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    z-index:2000;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    transition:.35s ease;
+
+    box-shadow:8px 0 30px rgba(0,0,0,.18);
+
+}
+
+/*==========================================
+        COLLAPSED
+==========================================*/
+
+.sidebar.collapsed{
+
+    width:85px;
+
+}
+
+.sidebar.collapsed .logo h2,
+
+.sidebar.collapsed .logo span,
+
+.sidebar.collapsed .menu-btn span span,
+
+.sidebar.collapsed .submenu{
+
+    display:none;
+
+}
+
+.sidebar.collapsed .menu-btn{
+
+    justify-content:center;
+
+}
+
+.sidebar.collapsed .menu-btn i.arrow{
+
+    display:none;
+
+}
+
+/*==========================================
+        LOGO
+==========================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:24px 22px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo img{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    padding:6px;
+
+}
+
+.logo h2{
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    font-size:12px;
+
+    color:#cbd5e1;
+
+}
+
+/*==========================================
+        MENU
+==========================================*/
+
+.menu{
+
+    flex:1;
+
+    padding:
+/*==========================================
+        SUB MENU
+==========================================*/
+
+.submenu{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.menu-group.open .submenu{
+
+    max-height:700px;
+
+}
+
+.submenu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px 12px 60px;
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    text-decoration:none;
+
+    position:relative;
+
+    transition:.30s;
+
+}
+
+/*==========================================
+        SUB MENU HOVER
+==========================================*/
+
+.submenu a:hover{
+
+    background:rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    padding-left:68px;
+
+}
+
+/*==========================================
+        ACTIVE LINK
+==========================================*/
+
+.submenu a.active{
+
+    background:linear-gradient(
+        90deg,
+        rgba(37,99,235,.35),
+        rgba(59,130,246,.15)
+    );
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    border-left:4px solid #60a5fa;
+
+}
+
+/*==========================================
+        ACTIVE DOT
+==========================================*/
+
+.submenu a::before{
+
+    content:"";
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#64748b;
+
+    transition:.30s;
+
+}
+
+.submenu a:hover::before{
+
+    background:#60a5fa;
+
+}
+
+.submenu a.active::before{
+
+    background:#ffffff;
+
+}
+
+/*==========================================
+        ARROW ROTATION
+==========================================*/
+
+.menu-group.open .arrow{
+
+    transform:rotate(180deg);
+
+}
+
+/*==========================================
+        MENU ANIMATION
+==========================================*/
+
+.menu-group{
+
+    animation:fadeMenu .25s ease;
+
+}
+
+@keyframes fadeMenu{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================================
+        SCROLLBAR
+==========================================*/
+
+.sidebar::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.sidebar::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:50px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover{
+
+    background:rgba(255,255,255,.35);
+
+}
+
+/*==========================================
+        SECTION SPACING
+==========================================*/
+
+.menu-group + .menu-group{
+
+    margin-top:6px;
+
+}
+
+/*==========================================
+        RIPPLE EFFECT
+==========================================*/
+
+.menu-btn{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.menu-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    transform:translate(-50%,-50%);
+
+    left:50%;
+
+    top:50%;
+
+    transition:.45s;
+
+}
+
+.menu-btn:active::after{
+
+    width:320px;
+
+    height:320px;
+
+}
+
+/*==========================================
+        MENU DIVIDER
+==========================================*/
+
+.menu-divider{
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+    margin:14px 18px;
+
+}
+
+/*==========================================
+        MENU TITLE
+==========================================*/
+
+.menu-title{
+
+    color:#94a3b8;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    padding:12px 22px;
+
+}
+/*==========================================
+        COLLAPSED TOOLTIP
+==========================================*/
+
+.sidebar.collapsed .menu-group{
+
+    position:relative;
+
+}
+
+.sidebar.collapsed .menu-group:hover::after{
+
+    content:attr(data-title);
+
+    position:absolute;
+
+    left:95px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:#0f172a;
+
+    color:#fff;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+
+    z-index:99999;
+
+    animation:tooltipFade .25s ease;
+
+}
+
+@keyframes tooltipFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-50%) translateX(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(-50%) translateX(0);
+
+    }
+
+}
+
+/*==========================================
+        MOBILE OVERLAY
+==========================================*/
+
+.sidebar-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,23,42,.55);
+
+    backdrop-filter:blur(3px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:1990;
+
+}
+
+.sidebar-overlay.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==========================================
+        MOBILE SIDEBAR
+==========================================*/
+
+@media(max-width:992px){
+
+    .sidebar{
+
+        left:-300px;
+
+        width:280px;
+
+    }
+
+    .sidebar.show{
+
+        left:0;
+
+    }
+
+    .main-content{
+
+        margin-left:0 !important;
+
+    }
+
+}
+
+/*==========================================
+        SMALL MOBILE
+==========================================*/
+
+@media(max-width:576px){
+
+    .sidebar{
+
+        width:260px;
+
+    }
+
+    .logo{
+
+        padding:18px;
+
+    }
+
+    .logo img{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .menu-btn{
+
+        padding:13px 18px;
+
+    }
+
+    .submenu a{
+
+        padding:11px 18px 11px 50px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/*==========================================
+        PREMIUM GLOW
+==========================================*/
+
+.menu-btn.active{
+
+    position:relative;
+
+}
+
+.menu-btn.active::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#60a5fa;
+
+    box-shadow:0 0 12px #60a5fa;
+
+}
+
+/*==========================================
+        LOGO HOVER
+==========================================*/
+
+.logo img{
+
+    transition:.35s;
+
+}
+
+.logo:hover img{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/*==========================================
+        SIDEBAR FOOTER
+==========================================*/
+
+.sidebar-footer{
+
+    margin-top:auto;
+
+    padding:18px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar-footer .version{
+
+    font-size:12px;
+
+    color:#94a3b8;
+
+    text-align:center;
+
+}
+
+.sidebar-footer .status{
+
+    margin-top:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    font-size:13px;
+
+    color:#22c55e;
+
+}
+
+.sidebar-footer .status i{
+
+    font-size:10px;
+
+}
+
+/*==========================================
+        ENTERPRISE HOVER EFFECT
+==========================================*/
+
+.menu-btn:hover{
+
+    transform:translateX(4px);
+
+}
+
+.submenu a:hover{
+
+    transform:translateX(5px);
+
+}
+
+/*==========================================
+        SMOOTH TRANSITIONS
+==========================================*/
+
+.sidebar,
+.menu-btn,
+.submenu,
+.submenu a,
+.arrow,
+.logo img{
+
+    transition:all .30s ease;
+
+}
+
+/*==========================================
+        END OF SIDEBAR.CSS
+==========================================*/
