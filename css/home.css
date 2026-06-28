@@ -1,0 +1,1741 @@
+/*==================================================
+            COCOBLU BI
+            HOME DASHBOARD
+==================================================*/
+
+.dashboard{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    padding:28px;
+
+}
+
+.dashboard-section{
+
+    width:100%;
+
+}
+
+/*=========================================
+        PAGE HEADER
+=========================================*/
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.page-header-left h1{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:var(--text-primary);
+
+    margin-bottom:8px;
+
+}
+
+.page-header-left p{
+
+    color:var(--text-secondary);
+
+    font-size:15px;
+
+}
+
+.page-header-right{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+/*=========================================
+        LAST SYNC CARD
+=========================================*/
+
+.sync-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px 22px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+
+    border:1px solid #edf1f7;
+
+}
+
+.sync-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+}
+
+.sync-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.sync-content small{
+
+    color:#6b7280;
+
+    font-size:12px;
+
+    margin-bottom:4px;
+
+}
+
+.sync-content strong{
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+        BUSINESS HEALTH CARD
+=========================================*/
+
+.business-health-card{
+
+    width:100%;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    border-radius:24px;
+
+    padding:32px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    color:#fff;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.business-health-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.business-health-left{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.business-health-left h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.business-health-left p{
+
+    opacity:.90;
+
+    max-width:500px;
+
+    line-height:1.7;
+
+}
+
+.health-score{
+
+    margin-top:28px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+}
+
+.health-score span{
+
+    font-size:70px;
+
+    font-weight:800;
+
+    line-height:1;
+
+}
+
+.health-score small{
+
+    font-size:26px;
+
+    margin-bottom:8px;
+
+}
+
+.health-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:18px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    font-weight:600;
+
+}
+
+.business-health-right{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.health-check-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.health-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.health-item i{
+
+    font-size:18px;
+
+}
+
+.text-success{
+
+    color:#4ade80;
+
+}
+
+.text-warning{
+
+    color:#facc15;
+
+}
+/*==================================================
+                    KPI GRID
+==================================================*/
+
+.kpi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+/*==================================================
+                    KPI CARD
+==================================================*/
+
+.kpi-card{
+
+    background:#ffffff;
+
+    border:1px solid #edf2f7;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    transition:.30s ease;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:default;
+
+}
+
+.kpi-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#2563eb;
+
+    opacity:0;
+
+    transition:.30s;
+
+}
+
+.kpi-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 45px rgba(15,23,42,.10);
+
+}
+
+.kpi-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+.kpi-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+}
+
+.kpi-header h5{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#6b7280;
+
+    margin-bottom:10px;
+
+}
+
+.kpi-value{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    line-height:1.2;
+
+}
+
+/*==================================================
+                    ICON
+==================================================*/
+
+.kpi-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:16px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+.kpi-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+    padding-top:18px;
+
+    border-top:1px solid #eef2f7;
+
+}
+
+.kpi-growth{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.kpi-growth.up{
+
+    color:#16a34a;
+
+}
+
+.kpi-growth.down{
+
+    color:#dc2626;
+
+}
+
+.kpi-period{
+
+    font-size:12px;
+
+    color:#94a3b8;
+
+}
+
+/*==================================================
+                OPTIONAL HOVER CLASS
+==================================================*/
+
+.hover-lift{
+
+    transition:.30s ease;
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-6px);
+
+}
+/*==================================================
+                INSIGHT GRID
+==================================================*/
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+/*==================================================
+                INSIGHT CARD
+==================================================*/
+
+.insight-card{
+
+    background:#ffffff;
+
+    border:1px solid #edf2f7;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+    transition:.30s ease;
+
+}
+
+.insight-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(15,23,42,.10);
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+.insight-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.insight-menu{
+
+    color:#94a3b8;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.insight-menu:hover{
+
+    color:#2563eb;
+
+}
+
+/*==================================================
+                ICON
+==================================================*/
+
+.insight-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+}
+
+.insight-icon.success{
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+}
+
+.insight-icon.danger{
+
+    background:#fef2f2;
+
+    color:#dc2626;
+
+}
+
+.insight-icon.primary{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+.insight-icon.warning{
+
+    background:#fffbeb;
+
+    color:#d97706;
+
+}
+
+/*==================================================
+                BODY
+==================================================*/
+
+.insight-body small{
+
+    display:block;
+
+    color:#6b7280;
+
+    font-size:13px;
+
+    margin-bottom:10px;
+
+}
+
+.insight-body h3{
+
+    font-size:18px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.insight-body h2{
+
+    font-size:28px;
+
+    color:#111827;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.insight-body p{
+
+    color:#64748b;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+                FOOTER
+==================================================*/
+
+.insight-footer{
+
+    margin-top:18px;
+
+    padding-top:16px;
+
+    border-top:1px solid #eef2f7;
+
+}
+
+/*==================================================
+                BADGES
+==================================================*/
+
+.badge-success,
+.badge-danger,
+.badge-warning,
+.badge-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.badge-success{
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+}
+
+.badge-danger{
+
+    background:#fef2f2;
+
+    color:#dc2626;
+
+}
+
+.badge-warning{
+
+    background:#fffbeb;
+
+    color:#d97706;
+
+}
+
+.badge-primary{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+/*==================================================
+                    CHART LAYOUT
+==================================================*/
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+/*==================================================
+                    CHART CARD
+==================================================*/
+
+.chart-card{
+
+    background:#ffffff;
+
+    border:1px solid #edf2f7;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+    transition:.30s ease;
+
+    overflow:hidden;
+
+}
+
+.chart-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/*==================================================
+                    CARD HEADER
+==================================================*/
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:24px;
+
+}
+
+.card-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+}
+
+.card-header p{
+
+    font-size:14px;
+
+    color:#6b7280;
+
+}
+
+/*==================================================
+                HEADER ACTIONS
+==================================================*/
+
+.card-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.secondary-btn{
+
+    border:none;
+
+    outline:none;
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    color:#374151;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s ease;
+
+}
+
+.secondary-btn:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    border-color:#2563eb;
+
+}
+
+/*==================================================
+                    CARD BODY
+==================================================*/
+
+.card-body{
+
+    width:100%;
+
+    position:relative;
+
+}
+
+/*==================================================
+                    CANVAS
+==================================================*/
+
+.chart-card canvas{
+
+    width:100% !important;
+
+    height:340px !important;
+
+}
+
+/*==================================================
+            CHART PLACEHOLDER
+==================================================*/
+
+.chart-placeholder{
+
+    height:340px;
+
+    border:2px dashed #dbe4ee;
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    background:#fafcff;
+
+}
+
+.chart-placeholder i{
+
+    font-size:46px;
+
+    color:#94a3b8;
+
+}
+
+.chart-placeholder h4{
+
+    color:#374151;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.chart-placeholder p{
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+    text-align:center;
+
+    max-width:260px;
+
+}
+
+/*==================================================
+            FULL WIDTH CHART
+==================================================*/
+
+.chart-card.full-width{
+
+    width:100%;
+
+}
+
+/*==================================================
+            CHART TOOLBAR
+==================================================*/
+
+.chart-toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.chart-toolbar button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    color:#64748b;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.chart-toolbar button:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+/*==================================================
+                QUICK ACTION GRID
+==================================================*/
+
+.quick-action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+/*==================================================
+                QUICK ACTION CARD
+==================================================*/
+
+.quick-action-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:#ffffff;
+
+    border:1px solid #edf2f7;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:0 8px 25px rgba(15,23,42,.05);
+
+    transition:.30s ease;
+
+}
+
+.quick-action-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 45px rgba(15,23,42,.10);
+
+}
+
+/*==================================================
+                ACTION ICON
+==================================================*/
+
+.quick-action-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.quick-action-icon.primary{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+.quick-action-icon.success{
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+}
+
+.quick-action-icon.warning{
+
+    background:#fffbeb;
+
+    color:#d97706;
+
+}
+
+.quick-action-icon.danger{
+
+    background:#fef2f2;
+
+    color:#dc2626;
+
+}
+
+.quick-action-icon.info{
+
+    background:#ecfeff;
+
+    color:#0891b2;
+
+}
+
+.quick-action-icon.purple{
+
+    background:#f5f3ff;
+
+    color:#7c3aed;
+
+}
+
+/*==================================================
+                ACTION CONTENT
+==================================================*/
+
+.quick-action-content{
+
+    flex:1;
+
+}
+
+.quick-action-content h4{
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+}
+
+.quick-action-content p{
+
+    font-size:13px;
+
+    color:#6b7280;
+
+    line-height:1.5;
+
+}
+
+/*==================================================
+                ACTION BUTTON
+==================================================*/
+
+.action-btn{
+
+    border:none;
+
+    outline:none;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s ease;
+
+    flex-shrink:0;
+
+}
+
+.action-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.05);
+
+}
+
+.action-btn:active{
+
+    transform:scale(.98);
+
+}
+/*==================================================
+                ALERT LIST
+==================================================*/
+
+.alert-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.alert-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:16px;
+
+    border:1px solid #eef2f7;
+
+    border-radius:16px;
+
+    background:#fafcff;
+
+    transition:.30s ease;
+
+}
+
+.alert-item:hover{
+
+    background:#ffffff;
+
+    transform:translateX(4px);
+
+    box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+}
+
+.alert-icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+}
+
+.alert-icon.success{
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+}
+
+.alert-icon.warning{
+
+    background:#fffbeb;
+
+    color:#d97706;
+
+}
+
+.alert-icon.primary{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+.alert-icon.danger{
+
+    background:#fef2f2;
+
+    color:#dc2626;
+
+}
+
+.alert-content{
+
+    flex:1;
+
+}
+
+.alert-content h4{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:6px;
+
+}
+
+.alert-content p{
+
+    font-size:14px;
+
+    color:#64748b;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+                AI SUMMARY
+==================================================*/
+
+.ai-summary{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+}
+
+.ai-avatar{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.ai-content{
+
+    flex:1;
+
+}
+
+.ai-content ul{
+
+    margin:0;
+
+    padding-left:20px;
+
+}
+
+.ai-content li{
+
+    color:#475569;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    margin-bottom:10px;
+
+}
+
+/*==================================================
+                FOOTER
+==================================================*/
+
+.dashboard-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+    padding:22px 0;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+.footer-left p,
+
+.footer-center,
+
+.footer-right{
+
+    font-size:14px;
+
+    color:#64748b;
+
+}
+
+.footer-center strong{
+
+    color:#111827;
+
+    margin-left:6px;
+
+    font-weight:700;
+
+}
+
+.footer-right{
+
+    text-align:right;
+
+}
+/*==================================================
+                RESPONSIVE DESIGN
+==================================================*/
+
+/*==========================
+        Large Tablet
+==========================*/
+
+@media (max-width:1200px){
+
+    .kpi-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .quick-action-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/*==========================
+        Tablet
+==========================*/
+
+@media (max-width:992px){
+
+    .dashboard{
+
+        padding:20px;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .business-health-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:30px;
+
+    }
+
+    .business-health-right{
+
+        width:100%;
+
+    }
+
+    .health-check-list{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .dashboard-footer{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-right{
+
+        text-align:center;
+
+    }
+
+}
+
+/*==========================
+        Mobile
+==========================*/
+
+@media (max-width:768px){
+
+    .dashboard{
+
+        padding:16px;
+
+        gap:18px;
+
+    }
+
+    .page-header-left h1{
+
+        font-size:24px;
+
+    }
+
+    .page-header-left p{
+
+        font-size:14px;
+
+    }
+
+    .sync-card{
+
+        width:100%;
+
+    }
+
+    .business-health-card{
+
+        padding:22px;
+
+    }
+
+    .business-health-left h2{
+
+        font-size:24px;
+
+    }
+
+    .health-score span{
+
+        font-size:54px;
+
+    }
+
+    .health-score small{
+
+        font-size:20px;
+
+    }
+
+    .kpi-grid,
+
+    .grid-4,
+
+    .quick-action-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .kpi-card,
+
+    .insight-card,
+
+    .chart-card,
+
+    .quick-action-card{
+
+        padding:18px;
+
+    }
+
+    .quick-action-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .action-btn{
+
+        width:100%;
+
+    }
+
+    .chart-card canvas{
+
+        height:260px !important;
+
+    }
+
+    .ai-summary{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+/*==========================
+        Small Mobile
+==========================*/
+
+@media (max-width:480px){
+
+    .dashboard{
+
+        padding:12px;
+
+    }
+
+    .business-health-card{
+
+        border-radius:18px;
+
+    }
+
+    .health-check-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+    .card-action{
+
+        width:100%;
+
+    }
+
+    .secondary-btn{
+
+        width:100%;
+
+    }
+
+    .chart-card canvas{
+
+        height:220px !important;
+
+    }
+
+}
