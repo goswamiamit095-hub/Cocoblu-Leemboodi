@@ -10,56 +10,163 @@
 
     <title>Cocoblu BI Enterprise</title>
 
-    <!-- Google Font -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
     <!-- Font Awesome -->
 
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- CSS -->
+    <!-- Global CSS -->
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="css/style.css">
 
-    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet"
+          href="css/sidebar.css">
 
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet"
+          href="css/dashboard.css">
 
-    <link rel="stylesheet" href="css/cards.css">
-
-    <link rel="stylesheet" href="css/table.css">
-
-    <link rel="stylesheet" href="css/forms.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet"
+          href="css/home.css">
 
 </head>
 
 <body>
 
+<!--====================================
+            APP
+=====================================-->
+
 <div class="app">
 
-    <!-- ======================
-            SIDEBAR
-    ======================= -->
+    <!--====================================
+                SIDEBAR
+    =====================================-->
+
+    <!-- Sidebar Part-2 me aayega -->
+
+    <!--====================================
+            MAIN CONTENT
+    =====================================-->
+
+    <main class="main-content">
+
+        <!--====================================
+                TOP NAVBAR
+        =====================================-->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    id="toggleSidebar"
+                    class="icon-btn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <div class="page-heading">
+
+                    <h2 id="pageTitle">
+
+                        Business Overview
+
+                    </h2>
+
+                    <p>
+
+                        Home /
+
+                        <span id="breadcrumbPage">
+
+                            Business Overview
+
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="navbar-right">
+
+                <!-- Search -->
+
+                <button
+                    class="icon-btn">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+                <!-- Theme -->
+
+                <button
+                    id="themeToggle"
+                    class="icon-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <!-- Notification -->
+
+                <button
+                    class="icon-btn notification">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="badge">
+
+                        3
+
+                    </span>
+
+                </button>
+
+                <!-- Profile -->
+
+                <div class="profile">
+
+                    <img src="assets/logo/logo.png"
+                         alt="User">
+
+                    <div>
+
+                        <h4>
+
+                            Amit Goswami
+
+                        </h4>
+
+                        <span>
+
+                            Administrator
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+    <!--====================================
+                SIDEBAR
+    =====================================-->
 
     <aside class="sidebar" id="sidebar">
-<div class="sidebar-overlay"></div>
+
+        <!-- Logo -->
 
         <div class="logo">
 
             <img src="assets/logo/logo.png"
-                 alt="logo">
+                 alt="Cocoblu BI">
 
             <div>
 
@@ -71,11 +178,16 @@
 
         </div>
 
+        <!-- Menu -->
+
         <nav class="menu">
 
-            <!-- Dashboard -->
+            <!--=========================
+                    Dashboard
+            ==========================-->
 
-            <div class="menu-group">
+            <div class="menu-group open"
+                 data-title="Dashboard">
 
                 <button class="menu-btn active">
 
@@ -83,7 +195,7 @@
 
                         <i class="fa-solid fa-house"></i>
 
-                        Dashboard
+                        <span>Dashboard</span>
 
                     </span>
 
@@ -91,12 +203,11 @@
 
                 </button>
 
-                <div class="submenu show">
+                <div class="submenu">
 
                     <a href="#"
+                       class="active"
                        data-page="home">
-
-                        <i class="fa-solid fa-chart-pie"></i>
 
                         Business Overview
 
@@ -106,9 +217,12 @@
 
             </div>
 
-            <!-- Sales -->
+            <!--=========================
+                    Sales
+            ==========================-->
 
-            <div class="menu-group">
+            <div class="menu-group"
+                 data-title="Sales">
 
                 <button class="menu-btn">
 
@@ -116,7 +230,7 @@
 
                         <i class="fa-solid fa-chart-column"></i>
 
-                        Sales
+                        <span>Sales</span>
 
                     </span>
 
@@ -127,54 +241,43 @@
                 <div class="submenu">
 
                     <a href="#" data-page="monthly-summary">
-
                         Monthly Summary
-
                     </a>
 
                     <a href="#" data-page="daily-summary">
-
                         Daily Summary
-
                     </a>
 
                     <a href="#" data-page="asin-sales">
-
                         ASIN Sales
-
                     </a>
 
                     <a href="#" data-page="monthly-brand">
-
                         Monthly Brand Metrics
-
                     </a>
 
                     <a href="#" data-page="daily-brand">
-
                         Daily Brand Metrics
-
                     </a>
 
                     <a href="#" data-page="category">
-
                         Category
-
                     </a>
 
                     <a href="#" data-page="status">
-
                         Status
-
                     </a>
 
                 </div>
 
             </div>
 
-            <!-- Growth -->
+            <!--=========================
+                    Growth
+            ==========================-->
 
-            <div class="menu-group">
+            <div class="menu-group"
+                 data-title="Growth">
 
                 <button class="menu-btn">
 
@@ -182,7 +285,7 @@
 
                         <i class="fa-solid fa-chart-line"></i>
 
-                        Growth
+                        <span>Growth</span>
 
                     </span>
 
@@ -202,19 +305,17 @@
                 </div>
 
             </div>
+            <!--=========================
+                    Ads
+            =========================-->
 
-            <!-- Ads -->
-
-            <div class="menu-group">
+            <div class="menu-group" data-title="Ads">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-bullhorn"></i>
-
-                        Ads
-
+                        <span>Ads</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -223,57 +324,39 @@
 
                 <div class="submenu">
 
-                    <a href="#" data-page="monthly-ads">
+                    <a href="#" data-page="monthly-ads">Monthly Ads</a>
 
-                        Monthly Ads
-
-                    </a>
-
-                    <a href="#" data-page="daily-ads">
-
-                        Daily Ads
-
-                    </a>
+                    <a href="#" data-page="daily-ads">Daily Ads</a>
 
                     <a href="#" data-page="campaign">
-
                         Campaign Performance
-
                     </a>
 
                     <a href="#" data-page="asin-ads">
-
                         ASIN Performance
-
                     </a>
 
                     <a href="#" data-page="search-term">
-
                         Search Term
-
                     </a>
 
                     <a href="#" data-page="analysis">
-
                         Analysis
-
                     </a>
 
                 </div>
 
             </div>
+
             <!-- Purchase Order -->
 
-            <div class="menu-group">
+            <div class="menu-group" data-title="Purchase Order">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-box-open"></i>
-
-                        Purchase Order
-
+                        <span>Purchase Order</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -283,15 +366,11 @@
                 <div class="submenu">
 
                     <a href="#" data-page="po-recommendation">
-
                         PO Recommendation
-
                     </a>
 
                     <a href="#" data-page="recall-recommendation">
-
                         Recall Recommendation
-
                     </a>
 
                 </div>
@@ -300,16 +379,13 @@
 
             <!-- Projection -->
 
-            <div class="menu-group">
+            <div class="menu-group" data-title="Projection">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-file-invoice"></i>
-
-                        Projection
-
+                        <span>Projection</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -319,9 +395,7 @@
                 <div class="submenu">
 
                     <a href="#" data-page="projection">
-
                         Manual Projection
-
                     </a>
 
                 </div>
@@ -330,16 +404,13 @@
 
             <!-- Stock -->
 
-            <div class="menu-group">
+            <div class="menu-group" data-title="Stock">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-boxes-stacked"></i>
-
-                        Stock
-
+                        <span>Stock</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -349,9 +420,7 @@
                 <div class="submenu">
 
                     <a href="#" data-page="daily-stock">
-
                         Daily Stock
-
                     </a>
 
                 </div>
@@ -360,16 +429,13 @@
 
             <!-- Payment -->
 
-            <div class="menu-group">
+            <div class="menu-group" data-title="Payment">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-wallet"></i>
-
-                        Payment
-
+                        <span>Payment</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -379,21 +445,15 @@
                 <div class="submenu">
 
                     <a href="#" data-page="invoice">
-
                         Invoice Summary
-
                     </a>
 
                     <a href="#" data-page="payment">
-
                         Payment Received
-
                     </a>
 
                     <a href="#" data-page="deduction">
-
                         Return Deduction
-
                     </a>
 
                 </div>
@@ -402,16 +462,13 @@
 
             <!-- Returns -->
 
-            <div class="menu-group">
+            <div class="menu-group" data-title="Returns">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-arrow-rotate-left"></i>
-
-                        Returns
-
+                        <span>Returns</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -421,33 +478,23 @@
                 <div class="submenu">
 
                     <a href="#" data-page="monthly-return">
-
                         Monthly Return
-
                     </a>
 
                     <a href="#" data-page="daily-return">
-
                         Daily Return
-
                     </a>
 
                     <a href="#" data-page="asin-return">
-
                         ASIN Return
-
                     </a>
 
                     <a href="#" data-page="brand-return">
-
                         Brand Return
-
                     </a>
 
                     <a href="#" data-page="category-return">
-
                         Category Return
-
                     </a>
 
                 </div>
@@ -456,16 +503,13 @@
 
             <!-- Settings -->
 
-            <div class="menu-group">
+            <div class="menu-group" data-title="Settings">
 
                 <button class="menu-btn">
 
                     <span>
-
                         <i class="fa-solid fa-gear"></i>
-
-                        Settings
-
+                        <span>Settings</span>
                     </span>
 
                     <i class="fa-solid fa-angle-down arrow"></i>
@@ -475,21 +519,15 @@
                 <div class="submenu">
 
                     <a href="#" data-page="settings">
-
                         Application Settings
-
                     </a>
 
                     <a href="#" data-page="user-management">
-
                         User Management
-
                     </a>
 
                     <a href="#" data-page="role-management">
-
                         Role Management
-
                     </a>
 
                 </div>
@@ -498,325 +536,116 @@
 
         </nav>
 
+        <!--=========================
+                Sidebar Footer
+        =========================-->
+
+        <div class="sidebar-footer">
+
+            <div class="version">
+
+                Cocoblu BI v2.0 Enterprise
+
+            </div>
+
+            <div class="status">
+
+                <i class="fa-solid fa-circle"></i>
+
+                <span>System Online</span>
+
+            </div>
+
+        </div>
+
     </aside>
 
-    <!-- ==========================
-            MAIN CONTENT
-    =========================== -->
-
-    <main class="main-content">
-
-        <!-- Header -->
-
-        <header class="topbar">
-
-            <div class="topbar-left">
-
-                <button id="toggleSidebar"
-                        class="icon-btn">
-
-                    <i class="fa-solid fa-bars"></i>
-
-                </button>
-
-                <div>
-
-                    <h1 id="pageTitle">
-
-                        Business Overview
-
-                    </h1>
-
-                    <p>
-
-                        Cocoblu BI Enterprise Dashboard
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="topbar-center">
-
-                <div class="search-box">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                    <input
-                        type="text"
-                        placeholder="Search ASIN, Brand, Report...">
-
-                </div>
-
-            </div>
-            <div class="topbar-right">
-
-                <!-- Last Sync -->
-
-                <div class="sync-status">
-
-                    <i class="fa-solid fa-arrows-rotate"></i>
-
-                    <div>
-
-                        <small>Last Sync</small>
-
-                        <span id="lastSyncTime">
-
-                            Today 10:30 AM
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <!-- Theme -->
-
-                <button class="icon-btn"
-                        id="themeToggle">
-
-                    <i class="fa-solid fa-moon"></i>
-
-                </button>
-
-                <!-- Notification -->
-
-                <button class="icon-btn notification-btn">
-
-                    <i class="fa-regular fa-bell"></i>
-
-                    <span class="badge">
-
-                        3
-
-                    </span>
-
-                </button>
-
-                <!-- User -->
-
-                <div class="profile">
-
-                    <img src="assets/images/user.png"
-                         alt="User">
-
-                    <div class="profile-info">
-
-                        <h4>
-
-                            Amit Goswami
-
-                        </h4>
-
-                        <span>
-
-                            Super Admin
-
-                        </span>
-
-                    </div>
-
-                    <i class="fa-solid fa-angle-down"></i>
-
-                </div>
-
-            </div>
-
-        </header>
-
-        <!-- ==========================
-                BREADCRUMB
-        =========================== -->
-
-        <div class="breadcrumb">
-
-            <div class="breadcrumb-left">
-
-                <span>
-
-                    Dashboard
-
-                </span>
-
-                <i class="fa-solid fa-angle-right"></i>
-
-                <span id="breadcrumbPage">
-
-                    Business Overview
-
-                </span>
-
-            </div>
-
-            <div class="breadcrumb-right">
-
-                <button class="primary-btn">
-
-                    <i class="fa-solid fa-download"></i>
-
-                    Export
-
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- ==========================
-                KPI SECTION
-        =========================== -->
-
-        <section id="dashboardSummary">
-
-            <!-- KPI Cards will load here -->
+    <!--=========================
+            Sidebar Overlay
+    =========================-->
+
+    <div class="sidebar-overlay"></div>
+        <!--====================================
+                ROUTER CONTAINER
+        =====================================-->
+
+        <section id="app">
+
+            <!--
+                Router yahan pages load karega.
+
+                Default:
+                home.html
+            -->
 
         </section>
-
-        <!-- ==========================
-                PAGE CONTENT
-        =========================== -->
-
-        <section id="pageContainer">
-
-            <!-- Dynamic Pages -->
-
-        </section>
-
-        <!-- ==========================
-                RIGHT SIDEBAR (Future)
-        =========================== -->
-
-        <aside id="rightPanel">
-
-            <!-- Alerts -->
-
-            <!-- Notifications -->
-
-            <!-- Activity -->
-
-        </aside>
-
-        <!-- ==========================
-                PAGE LOADER
-        =========================== -->
-
-        <div id="pageLoader" class="page-loader">
-
-            <div class="loader">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
-
-            <h3>
-
-                Cocoblu BI Enterprise
-
-            </h3>
-
-            <p>
-
-                Loading Dashboard...
-
-            </p>
-
-        </div>
-
-        <!-- ==========================
-                TOAST MESSAGE
-        =========================== -->
-
-        <div id="toast" class="toast success">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span id="toastMessage">
-
-                Welcome to Cocoblu BI Enterprise
-
-            </span>
-
-        </div>
-
-        <!-- ==========================
-                FLOATING BUTTON
-        =========================== -->
-
-        <button id="fabButton"
-                class="fab">
-
-            <i class="fa-solid fa-plus"></i>
-
-        </button>
-
-        <!-- ==========================
-                SCROLL TO TOP
-        =========================== -->
-
-        <button id="scrollTopBtn"
-                class="scroll-top">
-
-            <i class="fa-solid fa-arrow-up"></i>
-
-        </button>
-
-        <!-- ==========================
-                FOOTER
-        =========================== -->
-
-        <footer class="footer">
-
-            <div class="footer-left">
-
-                © 2026 Cocoblu Retail Pvt. Ltd.
-
-            </div>
-
-            <div class="footer-center">
-
-                Cocoblu BI Enterprise Dashboard
-
-            </div>
-
-            <div class="footer-right">
-
-                Version 2.0
-
-            </div>
-
-        </footer>
 
     </main>
 
 </div>
 
-<!-- ==========================
-        JAVASCRIPT FILES
-========================== -->
+<!--====================================
+        PAGE LOADER
+=====================================-->
 
-<script src="js/config.js"></script>
+<div id="pageLoader" class="page-loader">
 
-<script src="js/utils.js"></script>
+    <div class="loader-box">
 
-<script src="js/api.js"></script>
+        <img src="assets/logo/logo.png"
+             alt="Loading">
 
-<script src="js/navigation.js"></script>
+        <h3>
+
+            Cocoblu BI
+
+        </h3>
+
+        <p>
+
+            Loading Dashboard...
+
+        </p>
+
+    </div>
+
+</div>
+
+<!--====================================
+        TOAST
+=====================================-->
+
+<div id="toast"
+     class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+
+        Success
+
+    </span>
+
+</div>
+
+<!--====================================
+        SCROLL TO TOP
+=====================================-->
+
+<button id="scrollTopBtn"
+        class="scroll-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!--====================================
+        JAVASCRIPT
+=====================================-->
 
 <script src="js/router.js"></script>
 
-<script src="js/dashboard.js"></script>
-
-<script src="js/cards.js"></script>
-
-<script src="js/charts.js"></script>
-
-<script src="js/tables.js"></script>
-
-<script src="js/loader.js"></script>
+<script src="js/navigation.js"></script>
 
 <script src="js/app.js"></script>
 
