@@ -23,13 +23,17 @@ const Sidebar = {
 
     init() {
 
-        this.cacheDOM();
+         this.cacheDOM();
 
-        this.bindEvents();
+    this.bindEvents();
 
-        this.restoreSidebarState();
+    this.restoreSidebarState();
 
-        this.restoreActiveMenu();
+    this.restoreActiveMenu();
+
+    this.bindKeyboardShortcuts();
+
+    this.loadInitialPage();
 
     },
 
@@ -213,7 +217,7 @@ const Sidebar = {
 
         }
 
-    }
+    },
     /*==========================================
             ENTERPRISE ACCORDION MENU
     ==========================================*/
@@ -364,7 +368,7 @@ const Sidebar = {
 
         }
 
-    }
+    },
     /*==========================================
             KEYBOARD SHORTCUTS
     ==========================================*/
@@ -417,13 +421,6 @@ const Sidebar = {
         START APPLICATION
 ==================================================*/
 
-window.addEventListener("load", () => {
-
-    Sidebar.bindKeyboardShortcuts();
-
-    Sidebar.loadInitialPage();
-
-});
 
 /*==================================================
         RESPONSIVE FIX
