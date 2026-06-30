@@ -258,11 +258,11 @@ const Router = {
 
             titles[page] || page;
 
-        if(window.Navigation){
+        const titleEl = document.getElementById("pageTitle");
+const breadEl = document.getElementById("breadcrumbPage");
 
-            Navigation.setTitle(title);
-
-        }
+if (titleEl) titleEl.textContent = title;
+if (breadEl) breadEl.textContent = title;
 
         document.title =
 
