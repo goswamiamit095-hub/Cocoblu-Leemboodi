@@ -36,9 +36,9 @@ const App = {
 
     initializeModules() {
 
-        if (window.Navigation) {
+        if (window.Sidebar) {
 
-            Navigation.init();
+            Sidebar.init();
 
         }
 
