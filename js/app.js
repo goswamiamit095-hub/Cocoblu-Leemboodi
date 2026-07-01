@@ -294,5 +294,23 @@ window.addEventListener(
 window.App = App;
 
 /*==========================================
+        PAGE LOADER
+==========================================*/
+
+window.showLoader = function () {
+    const loader = document.getElementById("pageLoader");
+    if (loader) {
+        loader.style.display = "flex";
+    }
+};
+
+window.hideLoader = function () {
+    const loader = document.getElementById("pageLoader");
+    if (loader) {
+        loader.style.display = "none";
+    }
+};
+
+/*==========================================
         END OF APP.JS
 ==========================================*/
